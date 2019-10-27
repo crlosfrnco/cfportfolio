@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1", minimum-scale=1, maximum-scale=1">
-<link media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="retina.css" type="text/css" rel="stylesheet">
 <title>carlosfran.co</title>
+<link media="only screen and (max-device-width: 480px)" href="small-device.css" type= "text/css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancoheaderfill.png"/>
 <link rel="apple-touch-icon" href="url">
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Chivo:300i,400|Source+Code+Pro:300,400&display=swap" rel="stylesheet">
@@ -123,7 +123,7 @@ h2 {
 }
 
 /* Responsive header + menu */
-@media screen and (max-width: 1334px) {
+@media screen and (max-width: 480px) {
 
   body,
   html {
@@ -166,8 +166,8 @@ h2 {
   .herom {
     background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png") no-repeat fixed top;
     background-size: 100%;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     margin: 0;
     padding: 0;
   }
@@ -187,72 +187,6 @@ h2 {
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.02), 0 2px 25px 0 rgba(0, 0, 0, 0.1);
   }
 
-}
-  
-@media screen and (-webkit-min-device-pixel-ratio: 2) {
-  
-  body,
-  html {
-    position: relative;
-    width: auto;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .menu {
-    position: static;
-    width: 100%;
-    height: auto;
-    padding: 0;
-    background-image: linear-gradient(#b3dbbb, #9fd3bc);
-  }
-
-  .menu a {
-    float: none;
-    text-align: center;
-    display: block;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    text-decoration: none;
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 60%;
-    line-height: 300%;
-  }
-
-  .menu-direction {
-    float: none;
-  }
-
-/*Override hero image*/
-  .hero {
-    background: none;
-  }
-
-  .herom {
-    background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png") no-repeat fixed 50% 5%%;
-    background-size: 100%;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-.grid-container {
-    background: #9fd3bc;
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 5%;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 25%;
-  }
-
-  img {
-    width: 100%;
-    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.02), 0 2px 25px 0 rgba(0, 0, 0, 0.1);
-  }
-  
 }
 
 </style>
