@@ -1,116 +1,116 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="UTF-8”>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CARLOS FRANCO</title>
+<title>carlosfran.co</title>
+<link rel="shortcut icon" type="image/x-icon" href="url"/>
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Chivo:300i,400|Source+Code+Pro:300,400&display=swap" rel="stylesheet">
 <link href="https://necolas.github.io/normalize.css/latest/normalize.css">
 <style>
 
-body, html {
-    background: #9fd3bc;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.header {
-    background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostampweb-2.jpg") no-repeat fixed center;
-    background-size: 50.7%;
-    width: auto;    
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.footer {
-    background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostampweb-2.jpg") no-repeat fixed center bottom;
-    background-size: contain;
-    width: auto;
-    height: 120%;
-    margin: 0;
-    padding: 0;
-}
-
-.menu {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-  background-color: #7ecab2;
-  list-style-type: none;
+body,
+html {
+  background: #9fd3bc;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  padding-left: 9px;
-  overflow: hidden;
 }
 
-li {
+/* Non-responsive menu */
+.menu {
+  position: fixed;
+  overflow: hidden;
+  background-color: none;
+  /* Padding for .menu content */
+  padding: 20px;
+}
+
+.menu a {
+  float: left;
+  text-align: center;
+  color: #0e1612;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 60%;
+  line-height: normal;
+}
+
+.menu a:hover {
+  background-image: linear-gradient(to right, #7ecab2, #7eccb5);
+  box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.02), 0 4px 18px 0 rgba(0, 0, 0, 0.03);
+}
+
+.menu-direction {
   float: left;
 }
 
-li a {
-  display: inline-block;
-  padding: 12px;
+/* Fixed logo hero image for desktop screens */
+.hero {
+  background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png") no-repeat fixed 50% 50%;
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-li a:hover {
-  color: #FDFDFD;
-  background-color: #7ecab2;
+.herom {
+  background: none;
 }
 
+.footer {
+  background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png") no-repeat fixed center bottom;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Portfolio content (column) */
 .grid-container {
   display: grid;
   grid-template-columns: auto;
-  grid-gap: 0;
+  grid-gap: 0%
   margin: 0;
   padding: 0;
 }
 
-.grid-container > div {
+.grid-container>div {
   text-align: center;
   margin: 0;
   padding: 0;
-  padding-bottom: 20%;
+  padding-bottom: 25%;
 }
 
-.item1 {
+.item {
   grid-column: 1 / span 1;
+}
+
+.grid-container a:link,
+a:visited {
+  color: #0e1612;
+  background-color: transparent;
+}
+
+.grid-container a:hover {
+  color: #FDFDFD;
+  background-color: #7ecab2;
 }
 
 img {
   width: 50%;
   height: 50%;
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05), 0 2px 45px 0 rgba(0, 0, 0, 0.1);
 }
 
-a:link, a:visited {
-  color: #0e1612;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #2a312f;
-  background-color: #b3dbbb;
-  text-decoration: none;
-}
-
-h1 {
-  color: #0e1612;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 16px;
-  font-weight: lighter;
-}
-
+/* For titular body content */
 h2 {
   color: #2a312f;
   font-family: 'Source Code Pro', monospace;
@@ -119,71 +119,157 @@ h2 {
   text-decoration: underline;
 }
 
+/* Responsive header + menu */
+@media screen and (max-width: 1334px) {
+
+  body,
+  html {
+    position: relative;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background-image: linear-gradient(#b3dbbb, #9fd3bc);
+  }
+
+  .menu a {
+    float: none;
+    text-align: center;
+    display: block;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    text-decoration: none;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 60%;
+    line-height: 300%;
+  }
+
+  .menu-direction {
+    float: none;
+  }
+
+/*Override hero image*/
+  .hero {
+    background: none;
+  }
+
+  .herom {
+    background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png") no-repeat fixed 50% 50%;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.grid-container {
+    background: #9fd3bc;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 25%;
+  }
+
+  img {
+    width: 100%;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.02), 0 2px 25px 0 rgba(0, 0, 0, 0.1);
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="menu">
-<ul>
-  <li>
-  <h1><a href="https://www.instagram.com/carlosfran.co/">
-  INSTAGRAM</a></h1>
-  </li>
-  <li>
-  <h1><a href="https://www.linkedin.com">LINKEDIN</a></h1>
-  </li>
-</ul>
+<div class="herom">
 </div>
-  
-<div class="header"></div>
+
+<div class="menu">
+  <div class="menu-direction">
+    <a href="#linkedin">
+      <h1>
+        LINKEDIN
+      </h1>
+    </a>
+    <a href="#resume">
+      <h1>
+        RESUME
+      </h1>
+    </a>
+    <a href="#portfolio">
+      <h1>
+        PORTFOLIO
+      </h1>
+    </a>
+  </div>
+</div>
+
+<div class="hero">
+</div>
 
 <div class="grid-container">
-  <div class="item1">
+  <div class="item">
     <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/bw_hero.png?w=2160">
     <h2>
-    Bridges and Water
+      <a href="https://bridgesandwaterblog.wordpress.com">
+        Bridges and Water
+      </a>
     </h2>
   </div>
-  <div class="item1">
+  <div class="item">
     <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/rshhero.png?w=2160">
     <h2>
-    RSHMedia
+      RSHMedia
     </h2>
   </div>
-  <div class="item1">
+  <div class="item">
     <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/twg_hero.png?w=2160">
     <h2>
-    I. The Worst Guys - <i>Childish Gambino</i> (Visualization)
+      <a href="https://vimeo.com/312413805">
+        I. The Worst Guys - <i>Childish Gambino</i> (Visualization)
+      </a>
     </h2>
   </div>
-  <div class="item1">
+  <div class="item">
     <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/bo_hero.png?w=2160">
     <h2>
-    Back OFF - <i>bülow</i> (Visualization)
+      Back OFF - <i>bülow</i> (Visualization)
     </h2>
   </div>
-  <div class="item1">
+  <div class="item">
     <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/dpim_hero.png?w=2160">
     <h2>
-    Design Principles In Motion
+      <a href="https://vimeo.com/313332124">
+        Design Principles In Motion
+      </a>
     </h2>
   </div>
-  <div class="item1">
+  <div class="item">
     <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/ais_hero_2.png?w=2160">
     <h2>
-    Animation In Squares
+      <a href="https://vimeo.com/318351269">
+        Animation In Squares
+      </a>
     </h2>
   </div>
-  <div class="item1">
+  <div class="item">
     <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/donald-glover-portrait-hero.jpg?w=2160">
     <h2>
-    Donald Glover (Colored Pencil, 30 × 22)
+      Donald Glover (Colored Pencil, 30 × 22)
     </h2>
   </div>
-  
-  <div class="footer"></div>
- </div>
 
-</body>
+  <div class="footer" media="(min-width: 1335px)"></div>
+</div>
+
 </html>
