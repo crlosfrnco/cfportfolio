@@ -4,9 +4,9 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1", minimum-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>carlosfran.co</title>
-<link media="only screen and (max-device-width: 480px)" href="small-device.css" type= "text/css" rel="stylesheet">
+<link media="only screen and (max-device-width: 1334px)" href="small-device.css" type= "text/css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancoheaderfill.png"/>
 <link rel="apple-touch-icon" href="url">
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Chivo:300i,400|Source+Code+Pro:300,400&display=swap" rel="stylesheet">
@@ -57,7 +57,7 @@ html {
 .hero {
   background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png") no-repeat fixed 50% 50%;
   background-size: 50%;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -80,7 +80,7 @@ html {
 .grid-container {
   display: grid;
   grid-template-columns: auto;
-  grid-gap: 0%
+  grid-gap: 0;
   margin: 0;
   padding: 0;
 }
@@ -129,7 +129,7 @@ h2 {
   html {
     position: relative;
     width: auto;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
   }
@@ -165,8 +165,8 @@ h2 {
 
   .herom {
     background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png") no-repeat fixed top;
-    background-size: 100%;
-    max-width: 100%;
+    background-size: contain;
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
