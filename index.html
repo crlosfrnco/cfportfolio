@@ -24,9 +24,12 @@ html {
 
 /* Non-responsive menu */
 .menu {
-  position: fixed;
+  position: sticky;
+  top: 0;
   overflow: hidden;
   background-color: none;
+  width: 100%;
+  height: auto;
   /* Padding for .menu content */
   padding: 1%;
 }
@@ -45,6 +48,7 @@ html {
 
 .menu a:hover {
   background-image: linear-gradient(to right, #7ecab2, #7eccb5);
+  color: #FDFDFD;
   box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.02), 0 4px 18px 0 rgba(0, 0, 0, 0.03);
 }
 
@@ -143,7 +147,7 @@ h2 {
     height: auto;
     padding: 0;
     padding-top: 0;
-    padding-bottom: 25%;
+    padding-bottom: 20%;
     background-image: linear-gradient(#7ecab2, #9fd3bc);
   }
 
