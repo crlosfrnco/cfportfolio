@@ -20,37 +20,44 @@ html {
   padding: 0;
 }
 
-/* Non-responsive menu */
+/* Non-responsive menu (horizontal list) */
 ul {
+  background-color: none;
   list-style-type: none;
   position: sticky;
+  top: 0;
   overflow: hidden;
-  background-color: none;
   /* Padding for .menu content */
-  padding: 0;
-  padding-left: 1%;
+  padding: 1%;
+  margin: 0;
 }
 
 li {
   float: left;
 }
 
+/* List item [link] */
 li a {
-  display: inline-block;
-  text-align: center;
-  color: #0e1612;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-decoration: none;
   font-family: 'Archivo Black', sans-serif;
   font-size: 60%;
+  color: #0e1612;
   line-height: normal;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 li a:hover {
   background-image: linear-gradient(to right, #7ecab2, #7eccb5);
-  color: #FDFDFD;
   box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.02), 0 4px 18px 0 rgba(0, 0, 0, 0.03);
+  color: #FDFDFD;
+}
+
+/* For mobile "hero" */
+ul img {
+  width: 0;
 }
 
 /* Fixed logo hero image for desktop screens */
@@ -63,6 +70,7 @@ li a:hover {
   padding: 0;
 }
 
+/* To hide mobile hero */
 .herom {
   background: none;
 }
@@ -86,6 +94,7 @@ li a:hover {
 }
 
 .grid-container>div {
+  font-size: 65%;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -98,48 +107,50 @@ li a:hover {
 
 .grid-container a:link,
 a:visited {
-  color: #0e1612;
   background-color: transparent;
+  color: #0e1612;
 }
 
 .grid-container a:hover {
-  color: #FDFDFD;
   background-color: #7ecab2;
+  color: #FDFDFD;
 }
 
-img {
+.grid-container img {
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05), 0 2px 45px 0 rgba(0, 0, 0, 0.1);
   width: 50%;
   height: 50%;
-  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05), 0 2px 45px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* For titular body content */
+/* For titular grid content */
 h2 {
-  color: #2a312f;
   font-family: 'Source Code Pro', monospace;
-  font-size: 12px;
   font-weight: lighter;
+  color: #2a312f;
   text-decoration: underline;
 }
+
+/*------------------------------------------------------------------------------------------------------------*/
 
 /* Responsive header + menu */
 @media screen and (max-width: 1334px) {
 
   body,
   html {
-    position: relative;
     width: auto;
-    height: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
   }
 
   ul {
+    background-image: linear-gradient(#7ecab2, #9fd3bc);
     position: static;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 0;
-    background-image: linear-gradient(#b3dbbb, #9fd3bc);
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   li {
@@ -147,32 +158,38 @@ h2 {
   }
 
   li a {
-    float: none;
-    text-align: center;
-    display: block;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    text-decoration: none;
     font-family: 'Archivo Black', sans-serif;
     font-size: 60%;
     line-height: 300%;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    float: none;
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+
+  ul img {
+    box-shadow: none;
+    width: 100%;
   }
 
 /*Override hero image*/
   .hero {
     background: none;
   }
-
+/*
   .herom {
     background: url("https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png") no-repeat fixed 50% 50%;
     background-size: 100%;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
   }
+*/
 
-.grid-container {
+  .grid-container {
     background: #9fd3bc;
     display: grid;
     grid-template-columns: auto;
@@ -182,9 +199,9 @@ h2 {
     padding-bottom: 25%;
   }
 
-  img {
-    width: 100%;
+  .grid-container img {
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.02), 0 2px 25px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
   }
 
 }
@@ -198,6 +215,9 @@ h2 {
 </div>
 
 <ul>
+  <li>
+    <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostampheader-e1571992934924.png">
+  </li>
   <li>
     <a href="#linkedin">
       <h1>
