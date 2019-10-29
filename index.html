@@ -4,11 +4,9 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1", minimum-scale=1, maximum-scale=1">
 <title>carlosfran.co</title>
-<link media="only screen and (max-device-width: 1334px)" href="small-device.css" type= "text/css" rel="stylesheet">
-<link rel="shortcut icon" type="image/x-icon" href="https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancoheaderfill.png"/>
-<link rel="apple-touch-icon" href="url">
+<link rel="shortcut icon" type="image/x-icon" href="https://carlosfrancoweb.files.wordpress.com/2019/10/cf_logo_fav_fill-2.png"/>
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Chivo:300i,400|Source+Code+Pro:300,400&display=swap" rel="stylesheet">
 <link href="https://necolas.github.io/normalize.css/latest/normalize.css">
 <style>
@@ -23,41 +21,36 @@ html {
 }
 
 /* Non-responsive menu */
-.menu {
+ul {
+  list-style-type: none;
   position: sticky;
-  top: 0;
   overflow: hidden;
   background-color: none;
-  width: 100%;
-  height: auto;
   /* Padding for .menu content */
-  padding: 1%;
+  padding: 0;
+  padding-left: 1%;
 }
 
-.menu a {
+li {
   float: left;
+}
+
+li a {
+  display: inline-block;
   text-align: center;
   color: #0e1612;
   padding-left: 20px;
   padding-right: 20px;
   text-decoration: none;
   font-family: 'Archivo Black', sans-serif;
-  font-size: 50%;
+  font-size: 60%;
   line-height: normal;
 }
 
-.menu a:hover {
+li a:hover {
   background-image: linear-gradient(to right, #7ecab2, #7eccb5);
   color: #FDFDFD;
   box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.02), 0 4px 18px 0 rgba(0, 0, 0, 0.03);
-}
-
-.menu-direction {
-  float: left;
-}
-  
-.menu img {
-  width: 0%;
 }
 
 /* Fixed logo hero image for desktop screens */
@@ -94,7 +87,6 @@ html {
 
 .grid-container>div {
   text-align: center;
-  font-size: 65%;
   margin: 0;
   padding: 0;
   padding-bottom: 25%;
@@ -115,7 +107,7 @@ a:visited {
   background-color: #7ecab2;
 }
 
-.grid-container img {
+img {
   width: 50%;
   height: 50%;
   box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05), 0 2px 45px 0 rgba(0, 0, 0, 0.1);
@@ -125,6 +117,7 @@ a:visited {
 h2 {
   color: #2a312f;
   font-family: 'Source Code Pro', monospace;
+  font-size: 12px;
   font-weight: lighter;
   text-decoration: underline;
 }
@@ -136,22 +129,24 @@ h2 {
   html {
     position: relative;
     width: auto;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
   }
 
-  .menu {
+  ul {
     position: static;
     width: 100%;
     height: auto;
     padding: 0;
-    padding-top: 0;
-    padding-bottom: 20%;
-    background-image: linear-gradient(#7ecab2, #9fd3bc);
+    background-image: linear-gradient(#b3dbbb, #9fd3bc);
   }
 
-  .menu a {
+  li {
+    float: none;
+  }
+
+  li a {
     float: none;
     text-align: center;
     display: block;
@@ -161,10 +156,6 @@ h2 {
     font-family: 'Archivo Black', sans-serif;
     font-size: 60%;
     line-height: 300%;
-  }
-
-  .menu-direction {
-    float: none;
   }
 
 /*Override hero image*/
@@ -191,17 +182,11 @@ h2 {
     padding-bottom: 25%;
   }
 
-  .grid-container img {
+  img {
     width: 100%;
-    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.02), 0 2px 25px 0 rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.02), 0 2px 25px 0 rgba(0, 0, 0, 0.1);
   }
-  
-  .menu img {
-    width: 100%;
-    padding-bottom: 0;
-    box-shadow: none; 
-  }
-  
+
 }
 
 </style>
@@ -211,28 +196,31 @@ h2 {
 
 <div class="herom">
 </div>
-  
-<div class="menu">
-  <div class="menu-direction">
-    <img src="https://carlosfrancoweb.files.wordpress.com/2019/10/carlosfrancostamp4k.png">
-    <a href="#portfolio">
-      <h1>
-        PORTFOLIO
-      </h1>
-    </a>
-    <a href="#resume">
-      <h1>
-        RESUME
-      </h1>
-    </a>
+
+<ul>
+  <li>
     <a href="#linkedin">
       <h1>
         LINKEDIN
       </h1>
     </a>
-  </div>
-</div>
-  
+  </li>
+  <li>
+    <a href="#resume">
+      <h1>
+        RESUME
+      </h1>
+    </a>
+  </li>
+  <li>
+    <a href="#portfolio">
+      <h1>
+        PORTFOLIO
+      </h1>
+    </a>
+  </li>
+</ul>
+
 <div class="hero">
 </div>
 
